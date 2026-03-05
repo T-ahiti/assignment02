@@ -9,17 +9,42 @@
 
 <body class="bg-[#1A0B2E] text-white">
     <header>
-        <nav class="h-[62px] flex justify-between items-center w-8/10 m-auto ">
-            <div class="text-3xl font-bold">Tech<span class="bg-linear-to-bl from-[#9100F8] via-[#FB09B4] to-[#F7E93F] bg-clip-text text-transparent">Wave</span></div>
-            <div>
+        <nav class="h-[62px] flex justify-between items-center w-8/10 m-auto relative">
+            
+            <div class="text-3xl font-bold flex-1">
+                Tech<span class="bg-linear-to-bl from-[#9100F8] via-[#FB09B4] to-[#F7E93F] bg-clip-text text-transparent">Wave</span>
+            </div>
+        
+            <input type="checkbox" id="nav-btn" class="peer hidden">
+        
+            <div class="hidden md:flex flex-1 justify-center">
                 <ul class="flex gap-8 text-sm">
+                    <li class="cursor-pointer hover:text-purple-500">About</li>
+                    <li class="cursor-pointer hover:text-purple-500">Episodes</li>
+                    <li class="cursor-pointer hover:text-purple-500">Host</li>
+                </ul>
+            </div>
+        
+            <div class="flex-1 flex justify-end items-center">
+                <button class="hidden md:flex text-sm font-semibold items-center gap-2 bg-linear-to-bl from-[#9100F8] via-[#FB09B4] to-[#F7E93F] text-white px-6 py-2 rounded-4xl">
+                    Subscribe
+                </button>
+        
+                <label for="nav-btn" class="md:hidden cursor-pointer p-2 z-50">
+                    <img src="assets/more.png" alt="">
+                </label>
+            </div>
+        
+            <div class="hidden peer-checked:flex flex-col absolute top-full right-0 w-48 bg-gray-900 border border-white/10 rounded-xl p-6 mt-2 z-40 md:hidden">
+                <ul class="flex flex-col gap-4 text-sm mb-4">
                     <li>About</li>
                     <li>Episodes</li>
                     <li>Host</li>
                 </ul>
+                <button class="bg-linear-to-bl from-[#9100F8] via-[#FB09B4] to-[#F7E93F] text-white py-2 rounded-full text-xs">Subscribe</button>
             </div>
-            <div><button class="text-sm font-semibold flex items-center gap-2 bg-linear-to-bl from-[#9100F8] via-[#FB09B4] to-[#F7E93F] text-white px-6 py-2 rounded-4xl" >Subscribe<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgba(255, 255, 255, 1.00)" d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/></svg></button></div>
         </nav>
+
         <hr class="border-t border-[#e4e4e4]/50">
         <!-- banner -->
         <div class="bg-[url('./assets/hero.png')] bg-cover w-full h-96 min-h-screen">
@@ -39,7 +64,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="hidden">
       
         <!-- about me -->
         <section class="flex justify-center items-center min-h-screen">
@@ -79,16 +104,16 @@
         <section class="mb-22">
             <div class="w-8/10 mx-auto">
                 <h1 class="text-center text-4xl font-bold mb-10 mt-22">Featured Episodes</h1>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="bg-[rgba(53,17,101,0.4)] rounded-3xl p-6" >  <h1 class="mb-2 text-xl font-bold">The Future of AI in Everyday Life</h1>      <p class="font-normal text-[rgb(153,153,153)]">Exploring how artificial intelligence is transforming our daily routines and what to expect in the next decade.</p> <p class="text-[#00FF88] mt-2 flex gap-2 items-center"><img src="assets/clock.png" class="w-max h-max" alt="">42 min</p> </div>
-                    <div class="bg-[rgba(53,17,101,0.4)] rounded-3xl p-6" >  <h1 class="mb-2 text-xl font-bold">Building Better Habits for Remote Work</h1> <p class="font-normal text-[rgb(153,153,153)]">Practical strategies for staying productive and maintaining work-life balance in a remote environment.</p>          <p class="text-[#00FF88] mt-2 flex gap-2 items-center"><img src="assets/clock.png" class="w-max h-max" alt="">35 min</p> </div>
-                    <div class="bg-[rgba(53,17,101,0.4)] rounded-3xl p-6" >  <h1 class="mb-2 text-xl font-bold">Career Growth in Tech: A Roadmap</h1>       <p class="font-normal text-[rgb(153,153,153)]">Expert advice on navigating your tech career from junior developer to senior leadership roles.</p>                  <p class="text-[#00FF88] mt-2 flex gap-2 items-center"><img src="assets/clock.png" class="w-max h-max" alt="">51 min</p> </div>
+                <div class="grid grid-cols-3 gap-5">
+                    <div class="bg-[rgba(53,17,101,0.4)] rounded-3xl overflow-hidden" > <iframe class="w-full h-62 rounded-t-3xl mb-4" src="https://www.youtube.com/embed/oX7OduG1YmI?si=-WyO_7yvLYW7T1VL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  <h1 class="mb-2 mx-6 text-xl font-bold">The Future of AI in Everyday Life</h1>      <p class="font-normal text-[rgb(153,153,153)] mx-6">Exploring how artificial intelligence is transforming our daily routines and what to expect in the next decade.</p> <p class="text-[#00FF88] text-sm mt-2 flex gap-2 items-center mx-6 mb-6"><img src="assets/clock.png" class="w-max h-max" alt="">42 min</p> </div>
+                    <div class="bg-[rgba(53,17,101,0.4)] rounded-3xl overflow-hidden" > <iframe class="w-full h-62 rounded-t-3xl mb-4" src="https://www.youtube.com/embed/bdsc3Spm6Sw?si=t6hcDrzPQbnwqIiT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  <h1 class="mb-2 mx-6 text-xl font-bold">Building Better Habits for Remote Work</h1> <p class="font-normal text-[rgb(153,153,153)] mx-6">Practical strategies for staying productive and maintaining work-life balance in a remote environment.</p>          <p class="text-[#00FF88] text-sm mt-2 flex gap-2 items-center mx-6 mb-6"><img src="assets/clock.png" class="w-max h-max" alt="">35 min</p> </div>
+                    <div class="bg-[rgba(53,17,101,0.4)] rounded-3xl overflow-hidden" > <iframe class="w-full h-62 rounded-t-3xl mb-4" src="https://www.youtube.com/embed/Au6oHXaVsaY?si=GvSO5GcKebSRWiir" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  <h1 class="mb-2 mx-6 text-xl font-bold">Career Growth in Tech: A Roadmap</h1>       <p class="font-normal text-[rgb(153,153,153)] mx-6">Expert advice on navigating your tech career from junior developer to senior leadership roles.</p>                  <p class="text-[#00FF88] text-sm mt-2 flex gap-2 items-center mx-6 mb-6"><img src="assets/clock.png" class="w-max h-max" alt="">51 min</p> </div>
                 </div>
             </div>
 
             <h1 class="text-center text-4xl font-bold mb-10 mt-22">Meet the Host</h1>
             <div class="bg-[rgba(53,17,101,0.4)] w-8/10 mx-auto flex justify-center items-center gap-6 rounded-4xl p-8">
-               <div> <img src="assets/host.png" alt="Host Image" class="w-full"></div>
+               <div> <img src="assets/host.png" alt="Host Image" class="w-md"></div>
                <div> 
                     <h1 class="text-2xl font-bold mb-3">Alex Kumar</h1>
                    <p class="font-normal text-[rgb(153,153,153)] mb-3">Tech entrepreneur, productivity expert, and lifelong learner. Alex has been in the tech industry for over 10 years, working with startups and Fortune 500 companies. Through TechWave, Alex shares insights from industry leaders and practical advice for anyone looking to grow in tech.</p>
@@ -101,9 +126,9 @@
 
     </main>
 
-    <footer class="bg-[url('./assets/footer-bg.png')] bg-cover w-full">
+    <footer class="bg-[url('./assets/footer-bg.png')] bg-contain w-full hidden">
        <div class="flex flex-col justify-center items-center">
-            <h1 class="text-7xl font-bold mt-22 mb-6">Tech<span class="bg-linear-to-bl from-[#9100F8] via-[#FB09B4] to-[#F7E93F] bg-clip-text text-transparent">Wave</span></h1>
+            <h1 class="text-7xl font-bold mt-18 mb-6">Tech<span class="bg-linear-to-bl from-[#9100F8] via-[#FB09B4] to-[#F7E93F] bg-clip-text text-transparent">Wave</span></h1>
             <div class="flex gap-6">
                 <div class="flex justify-center items-center gap-2"> <img src="assets/spotify.png" alt="">         <p class="font-normal text-[rgb(153,153,153)]">Spotify</p> </div>
                 <div class="flex justify-center items-center gap-2"> <img src="assets/apple-podcast.png" alt="">   <p class="font-normal text-[rgb(153,153,153)]">Apple Podcasts</p> </div>
